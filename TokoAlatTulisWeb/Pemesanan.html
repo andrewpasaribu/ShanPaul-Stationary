@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manajemen Pemesanan - ShanPaul</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Manajemen Pemesanan</h1>
+      <div class="card">
+        <h2>Buat Pesanan Baru</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="selectBarang">Pilih Barang:</label>
+            <select id="selectBarang" required>
+              <option value="">-- Memuat Data Barang... --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputNama">Nama Pembeli:</label>
+            <input
+              type="text"
+              id="inputNama"
+              placeholder="Masukkan nama pembeli"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputJumlah">Jumlah:</label>
+            <input type="number" id="inputJumlah" min="1" value="1" required />
+          </div>
+          <button type="submit" class="btn-primary">Simpan Pesanan</button>
+        </form>
+        <p id="errorMessage" class="error-text" style="display: none"></p>
+      </div>
+      <div class="card">
+        <h2>Riwayat Transaksi</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Barang</th>
+              <th>Pembeli</th>
+              <th>Jml</th>
+              <th>Total Bayar</th>
+              <th>Tanggal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
